@@ -1,0 +1,193 @@
+<html>
+
+<head>
+    <title>
+        Resume.com
+    </title>
+    <link rel="stylesheet" href="D:\sublimefiles\ResumeBuilderProject\resume3Style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- // stylesheet -->
+</head>
+
+<body>
+
+<div class="container" id="cvFormcont">
+
+   <h1 class="text" style="background: olivedrab">Resume Builder</h1>
+    
+
+   
+
+    <div class="row" >
+
+
+<div class="col-md-6">
+
+<h1 style="background: olivedrab">Personal Information </h1>
+<label>Name</label>
+<input  id="fname" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+
+<label>Email</label>
+<input id="femail" type="email"  class="form-control" placeholder="Enter your Email" style="width: 100%">
+<label>Phone Number</label>
+<input id="fphone" type="number"  class="form-control"placeholder="Contact information Mobile " style="width: 100%">
+<label>Address</label>
+<textarea id="faddress" placeholder="Enter your address" style="width: 100%"></textarea>
+<p >Important Links</p>
+<label>linkedIn</label>
+<input  type="text" placeholder="linkedIn Id" class="form-control">
+<label>facebook</label>
+<input id="Ffacebk" type="text" placeholder="facebook Id" class="form-control">
+<label>GitHub</label>
+<input  type="text" placeholder="GitHub link Id" class="form-control">
+<label>Instagram</label>
+<input  type="text" placeholder="Instagram Id" class="form-control">
+
+</div>
+
+<!-- // second column -->
+
+<div class="col-md-6"">
+
+<h1 style="background: olivedrab">Professional Information </h1>
+<div class="container">
+<label>Objective</label>
+<textarea  id="fobjective" type="text" placeholder="Please write your Objective" style="width:100%"></textarea>
+</div>
+<br>
+<br>
+
+<div class="container" id="skillCont" style="width:100%; ">
+
+<label>Skill's</label>
+<textarea placeholder="Write your Skills" style="width:100%;" class="fuserSkills" ></textarea>
+<!-- //textarea2 -->
+<!-- //textarea3 -->
+<!-- //textarea4 -->
+<!-- //textarea5 -->
+
+<div class="container" id="skillAddbtnCnt">
+<button type="button" class="btn btn-primary" id="skillbtn" style="margin-top:10px;" onclick="addSkill()">Add</button>
+</div>
+
+</div> <!-- SkillContainer ends -->
+
+<br>
+
+
+<div class="container" id="wrkexpCont" style="width:100%">     
+    <!-- // note I do not need the class to target the container with class selecot, 
+    I only need to target it with id selector and get it there in the javaScript., however I need to target the text area with class selector ,
+    //as I need multiple textarea(including the newly added one's) ,
+     //target them all at once with class selector, and ally the properties I wana apply on them(on all the textarea feild)  -->
+
+<label>WorkExperience</label>
+<textarea placeholder="WorkExperience" style="width:100%" class="fworkexp"></textarea>
+
+<div class="container" id="buttonCont">
+<button id="workExpButton" type="button" class="btn btn-primary" style="margin-top: 10px;" onclick="addWorkExp()">Add</button>
+</div>
+
+</div>  <!-- // workExpContainer ends -->
+
+
+
+</div>  <!-- // second column ends here -->
+
+
+
+</div>  <!-- row end -->
+
+
+<!-- //another container for GenerateCV button -->
+
+<div class="container text" >
+    <button type="button" id="generateCvbtn" class="btn btn-success" style="margin-top: 20px; margin-bottom: 20px;" onclick="generateCvFun()">GenerateCV</button>
+    
+</div>
+
+
+
+</div>   <!-- // container for form ends here   -->
+
+
+
+
+
+<!-- // create a new container which will have Cv template -->
+
+<div class="containerTemplate" id="cvTempCont" style="border:2px solid black; margin-top:20px;">
+
+
+<div class="row">
+
+<!-- first column -->
+<div class="col-md-4">
+
+<img src="C:/Users/Public/Pictures/Sample Pictures/pandafinecircle1.jpg" class="pandaProperties">
+<p id="tname">myname</p>
+<p id="temail">myemailid</p>
+<p id="tphone">contact details are</p>
+<p id="taddress">no.54 durgesh vihar delhi 45812562</p>
+<p id="Tfacebk">facebook@.com</p>
+<p>Instagram</p>
+<p> linked.com</p>
+
+
+
+</div><!-- first column ends here -->
+
+<!-- //second column -->
+<div class="col-md-8" >
+<h3 style="background: aqua;" >Objective</h3>
+<p id="tobjective">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate veritatis consectetur 
+repudiandae dolorem aliquid atque dignissimos iure ad quia laborum.</p>
+
+<h3 style="background: aqua;">Skills</h3>
+<ul id="tuserSkills">
+<li>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus eos consequatur esse,
+cum, consequuntur vero quam suscipit veniam fugit dicta consectetur alias hic quos nam asperiores magni
+nostrum itaque architecto quas at? Assumenda esse, ullam,
+sed eaque labore voluptate amet debitis beatae at porro, nemo placeat ut cumque est molestiae!
+</li>
+<li>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, quis.
+</li>
+<li>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, error. Consequuntur recusandae magnam autem repudiandae.
+</li>
+
+</ul>
+
+
+<h3 style="background: rgb(5, 143, 197);">WorkExperience</h3>
+<ul id="Tworkexp">
+    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid ut corrupti blanditiis dicta inventore cumque ex quisquam exercitationem, sapiente, consequatur eius perspiciatis voluptate dignissimos enim.</li>
+    
+</ul>
+
+</div>  <!-- //second column ends here -->
+
+
+</div> <!-- // row ends here -->
+ 
+
+
+
+
+
+</div>
+ <!-- cvTemplate container ends -->
+
+
+
+<!-- // scripts -->
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<script src="D:\sublimefiles\ResumeBuilderProject\resumeGScript.js"></script>
+</body>
+
+
+</html>

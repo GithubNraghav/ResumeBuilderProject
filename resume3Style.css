@@ -1,0 +1,38 @@
+
+/* // this file will include styles for resumegenerator2.html */
+
+.text
+{
+    text-align: center;
+
+} 
+
+.textareaClass{
+
+    background:grey;
+}
+
+.pandaProperties{
+
+width:150px;
+height:150px;
+border:2px solid black;
+border-radius: 50%;
+
+}
+
+.containerTemplate{
+display: none;
+
+}
+
+/* .formContProperty{
+
+    display:none;
+} */
+
+/* .cvTempContProperty{
+display: block;
+
+} */
+
